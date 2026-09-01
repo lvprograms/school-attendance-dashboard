@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Harbor Point HS · Attendance Dashboard</title>
+    <meta
+      name="description"
+      content="A demo attendance and ADA-funding dashboard for a fictional high school. All data is synthetic and generated in the browser."
+    />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%232a78d6'/><text x='16' y='22' font-family='system-ui,sans-serif' font-size='16' font-weight='700' fill='white' text-anchor='middle'>HP</text></svg>" />
+  </head>
+
+  <body>
+    <div class="app">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand__mark" aria-hidden="true">HP</div>
+          <div>
+            <div class="brand__name">Harbor Point HS</div>
+            <div class="brand__sub">Westbrook Unified</div>
+          </div>
+        </div>
+
+        <div class="nav-label">Reports</div>
+        <nav id="nav" aria-label="Reports"></nav>
+
+        <div class="sidebar__foot">
+          <strong>Demo build.</strong> Every figure is synthetic, generated in your
+          browser from a fixed seed. No real students or schools are represented.
+          <div id="build-note" style="margin-top: 6px"></div>
+        </div>
+      </aside>
+
+      <div class="main">
+        <header class="topbar">
+          <div>
+            <h1 id="view-title">Attendance overview</h1>
+            <p id="view-blurb"></p>
+          </div>
+          <div class="topbar__actions">
+            <button type="button" id="theme-toggle" class="ghost-button" aria-pressed="false">
+              Dark mode
+            </button>
+          </div>
+        </header>
+
+        <main class="content">
+          <div id="filters"></div>
+          <div id="view" role="region" aria-live="polite">
+            <p class="loading">Generating the demo school year&hellip;</p>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
